@@ -86,10 +86,10 @@ public class Local extends AbsTransport {
 		int[] pids = new int[1];
 
 		try {
-			shellFd = Exec.createSubprocess("/system/bin/sh", "-", null, pids);
+			shellFd = Exec.createSubprocess("/data/usr/bin/bash", "-l", null, pids);
 		} catch (Exception e) {
 			bridge.outputLine(manager.res.getString(R.string.local_shell_unavailable));
-			Log.e(TAG, "Cannot start local shell", e);
+			Log.e(TAG, "Cannot start PFA shell", e);
 			return;
 		}
 
