@@ -36,7 +36,7 @@ android {
 	compileSdk 33
 
 	defaultConfig {
-		applicationId "org.connectbot"
+		applicationId "dev.kxxt.shell"
 		versionName androidGitVersion.name()
 		versionCode androidGitVersion.code()
 
@@ -71,6 +71,12 @@ android {
 				keyPassword property('keystorePassword')
 			}
 		}
+		debug {
+			storeFile file("/home/kxxt/.android/platform.keystore")
+			storePassword 'android'
+			keyPassword 'android'
+			keyAlias 'platform'
+		}
 	}
 	buildTypes {
 		release {
@@ -95,7 +101,6 @@ android {
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg', 'proguard-debug.cfg'
 			testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg', 'proguard-tests.cfg'
 
-			applicationIdSuffix ".debug"
 			testCoverageEnabled true
 		}
 	}
