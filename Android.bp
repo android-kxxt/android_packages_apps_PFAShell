@@ -1,0 +1,9 @@
+android_app_import {
+    visibility: ["//visibility:public"],
+    name: "PFAShell",
+    apk: "app/oss/release/app-oss-release.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+}
