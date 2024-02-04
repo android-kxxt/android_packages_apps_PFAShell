@@ -1,7 +1,8 @@
 android_app_import {
     visibility: ["//visibility:public"],
     name: "PFAShell",
-    apk: "app/oss/release/app-oss-release.apk",
+    apk: "app/build/outputs/apk/oss/release/app-oss-release-unsigned.apk",
+    // To build, run JAVA_HOME=/usr/lib/jvm/java-21-openjdk ./gradlew assembleRelease
     certificate: "platform",
     dex_preopt: {
         enabled: false,
